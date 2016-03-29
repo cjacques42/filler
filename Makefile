@@ -6,18 +6,18 @@
 #    By: cjacques <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 10:02:34 by cjacques          #+#    #+#              #
-#    Updated: 2016/03/24 14:17:00 by cjacques         ###   ########.fr        #
+#    Updated: 2016/03/29 14:01:55 by cjacques         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lem-in
+NAME = filler
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 OBJ_PATH = obj/
 SRC_PATH = srcs/
 SHELL = /bin/bash
 
-SRC_NAME =
+SRC_NAME =		main.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_filler.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cjacques <cjacques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/29 13:54:21 by cjacques         ###   ########.fr       */
+/*   Created: 2016/01/06 09:30:12 by cjacques          #+#    #+#             */
+/*   Updated: 2016/01/15 11:48:26 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_FILLER_H
-# define FT_FILLER_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include "ft_printf.h"
-# include "get_next_line.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+int			ft_printf(const char *format, ...);
 
 #endif
