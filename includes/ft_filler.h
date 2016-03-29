@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/29 13:54:21 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/29 14:56:21 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include "ft_list.h"
 
 #endif

@@ -6,12 +6,13 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 15:15:49 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/27 18:34:42 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/29 15:13:54 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "filler.h"
+#include "ft_filler.h"
 
-int			ft_parse_file(t_list *list, t_graph *graph)
+int			ft_parse_file(t_list *list)
 {
+	return (0);
 }
