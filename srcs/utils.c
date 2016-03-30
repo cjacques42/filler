@@ -12,7 +12,7 @@
 
 #include "ft_filler.h"
 
-int			ft_verif(char *str, char *c)
+int			ft_contain(char *str, char *c)
 {
 	int		index;
 

@@ -22,15 +22,15 @@ int				main(void)
 	{
 		if (ft_strncmp(line, "$$$ exec p1", 11) == 0)
 		{
-			map.sign = 'o';
-			if (ft_map(&map) != 0)
-				ft_error();
+			map.m_sign = 'o';
+			map.o_sign = 'x';
+			(ft_map(&map) != 0) ? ft_error() : 0;
 		}
 		else if (ft_strncmp(line, "$$$ exec p2", 11) == 0)
 		{
-			map.sign = 'x';
-			if (ft_map(&map) != 0)
-				ft_error();
+			map.m_sign = 'x';
+			map.o_sign = 'o';
+			(ft_map(&map) != 0) ? ft_error() : 0;
 		}
 		else
 			ft_error();

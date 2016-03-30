@@ -27,7 +27,8 @@ typedef struct	s_map
 	int		b_weidth;
 	int		p_height;
 	int		p_weidth;
-	char	sign;
+	char	m_sign;
+	char	o_sign;
 }				t_map;
 
 typedef struct	s_coord
