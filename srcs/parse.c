@@ -6,11 +6,20 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 15:15:49 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 12:33:09 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 14:55:24 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_filler.h"
+
+static int		ft_pos(int *val1, int *val2, char **split)
+{
+	*val1 = ft_atoi(split[1]);
+	*val2 = ft_atoi(split[2]);
+	if (*val1 <= 0 || *val2 <= 0)
+		return (1);
+	return (0);
+}
 
 static int		ft_pcs(t_map *map)
 {
@@ -70,16 +79,14 @@ int				ft_map(t_map *map)
 			return (1);
 		if (ft_strncmp("Plateau", line, 7) == 0)
 		{
-			map->b_height = ft_atoi(split[1]);
-			map->b_weidth = ft_atoi(split[2]);
-			if (map->b_height == 0 || map->b_weidth == 0 || ft_board(map) != 0)
+			if (ft_pos(&map->b_height, &map->b_weidth, split) == 1
+					|| ft_board(map) != 0)
 				return (1);
 		}
 		else if (ft_strncmp("Piece", line, 5) == 0)
 		{
-			map->p_height = ft_atoi(split[1]);
-			map->p_weidth = ft_atoi(split[2]);
-			if (map->p_height == 0 || map->p_weidth == 0 || ft_pcs(map) != 0)
+			if (ft_pos(&map->p_height, &map->p_weidth, split) == 1
+					|| ft_pcs(map) != 0)
 				return (1);
 		}
 		ft_free_split(split);

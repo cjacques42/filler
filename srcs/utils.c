@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 09:45:00 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 12:18:39 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 14:55:12 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		ft_free_split(char **split)
 	free(split);
 }
 
-int		ft_count_split(char **split)
+int			ft_count_split(char **split)
 {
 	int		index;
 
