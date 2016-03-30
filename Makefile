@@ -6,7 +6,7 @@
 #    By: cjacques <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 10:02:34 by cjacques          #+#    #+#              #
-#    Updated: 2016/03/29 15:16:57 by cjacques         ###   ########.fr        #
+#    Updated: 2016/03/30 11:18:07 by cjacques         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,10 @@ SRC_PATH = srcs/
 SHELL = /bin/bash
 
 SRC_NAME =		main.c			\
-				list.c
+				error.c			\
+				parse.c			\
+				free.c			\
+				utils.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
