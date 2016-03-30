@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 15:15:49 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 12:07:51 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 12:33:09 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int		ft_pcs(t_map *map)
 		map->pcs = ft_strjoin_and_free(map->pcs, line, 1, 1);
 		index++;
 	}
-	return (0);
+	return (ft_algorithm(map));
 }
 
 static int		ft_board(t_map *map)

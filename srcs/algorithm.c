@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/30 09:39:41 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 11:18:32 by cjacques         ###   ########.fr       */
+/*   Created: 2016/03/30 12:19:38 by cjacques          #+#    #+#             */
+/*   Updated: 2016/03/30 12:20:49 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_filler.h"
 
-void		ft_free_split(char **split)
+int		ft_algorithm(t_map *map)
 {
-	int		index;
-
-	index = 0;
-	while (split[index])
-	{
-		free(split[index]);
-		index++;
-	}
-	free(split[index]);
-	free(split);
+	(void)map;
+	return (0);
 }
