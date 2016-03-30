@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 12:15:34 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 15:07:32 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void			ft_free_split(char **split);
 int				ft_count_split(char **split);
 char			*ft_strjoin_and_free(char *s1, char *s2, int free1, int free2);
 int				ft_algorithm(t_map *map);
+int				ft_contain(char *str, char *c);
 
 #endif

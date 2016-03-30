@@ -6,11 +6,25 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 09:45:00 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 14:55:12 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 15:09:32 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_filler.h"
+
+int			ft_verif(char *str, char *c)
+{
+	int		index;
+
+	index = 0;
+	while (str[index])
+	{
+		if (ft_strchr(c, str[index]) == NULL)
+			return (1);
+		index++;
+	}
+	return (0);
+}
 
 void		ft_free_split(char **split)
 {
