@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 15:07:32 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/30 18:04:21 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,18 @@ typedef struct	s_map
 	int		p_weidth;
 	char	sign;
 }				t_map;
+
+typedef struct	s_coord
+{
+	int		b_index;
+	int		p_index;
+	int		x_b;
+	int		y_b;
+	int		x_p;
+	int		y_p;
+	int		x;
+	int		y;
+}				t_coord;
 
 void			ft_error(void);
 int				ft_map(t_map *map);
