@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/30 18:04:21 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/31 11:55:40 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+
+#include <math.h>
 
 typedef struct	s_map
 {
@@ -41,6 +43,9 @@ typedef struct	s_coord
 	int		y_p;
 	int		x;
 	int		y;
+	int		j;
+	int		d;
+	int		tmp;
 }				t_coord;
 
 void			ft_error(void);
