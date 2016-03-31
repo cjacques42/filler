@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/30 12:19:38 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/31 11:46:50 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/03/31 18:52:05 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 static int		ft_putpcs(t_map *map, t_coord *ret)
 {
 	int		count;
-	int		i;
 
 	count = 0;
 	ret->y_b = ret->b_index / map->b_weidth;
 	ret->x_b = ret->b_index % map->b_weidth;
 	ret->x = ret->x_b;
 	ret->y = ret->y_b;
+//	ret->p_index = ft_strlen(map->pcs) - 1;
 	ret->p_index = 0;
 	while (map->pcs[ret->p_index])
 	{
-		i = 0;
 		if (map->pcs[ret->p_index] == '*')
 		{
 			ret->y_p = ret->p_index / map->p_weidth;
@@ -63,6 +62,7 @@ int				ft_algorithm(t_map *map)
 		if (ft_putpcs(map, &ret) == 0)
 		{
 			ft_printf("%d %d\n", ret.y, ret.x);
+			usleep(500000);
 			return (0);
 		}
 		ret.b_index++;
