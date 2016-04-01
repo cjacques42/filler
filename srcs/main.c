@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/23 09:14:32 by cjacques          #+#    #+#             */
-/*   Updated: 2016/04/01 09:44:34 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/04/01 18:31:01 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ static void		ft_free_struct(t_map *map)
 	free(map->pcs);
 }
 
-static void		ft_init_struct(t_map *map)
+static void		ft_init_struct(t_map *map, char op, char my)
 {
 	map->board = NULL;
 	map->pcs = NULL;
+	map->m_sign = my;
+	map->o_sign = op;
 }
 
 int				main(void)
@@ -30,20 +32,19 @@ int				main(void)
 	t_map		map;
 
 	line = NULL;
-	ft_init_struct(&map);
 	while (get_next_line(0, &line))
 	{
 		if (ft_strncmp(line, "$$$ exec p1", 11) == 0)
 		{
-			map.m_sign = 'o';
-			map.o_sign = 'x';
-			(ft_map(&map) != 0) ? ft_error() : 0;
+			ft_init_struct(&map, 'x', 'o');
+			if (ft_map(&map) != 0)
+				return (ft_error());
 		}
 		else if (ft_strncmp(line, "$$$ exec p2", 11) == 0)
 		{
-			map.m_sign = 'x';
-			map.o_sign = 'o';
-			(ft_map(&map) != 0) ? ft_error() : 0;
+			ft_init_struct(&map, 'o', 'x');
+			if (ft_map(&map) != 0)
+				return (ft_error());
 		}
 		else
 			ft_error();

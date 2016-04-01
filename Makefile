@@ -6,7 +6,7 @@
 #    By: cjacques <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 10:02:34 by cjacques          #+#    #+#              #
-#    Updated: 2016/03/30 12:19:52 by cjacques         ###   ########.fr        #
+#    Updated: 2016/04/01 18:34:12 by cjacques         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHOONY: all clean fclean re norme
+.PHONY: all clean fclean re norme
