@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 13:45:35 by cjacques          #+#    #+#             */
-/*   Updated: 2016/04/01 09:44:43 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/04/01 11:11:04 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,11 @@ typedef struct	s_coord
 	int		y_p;
 	int		x;
 	int		y;
-	int		j;
-	int		d;
+	int		t;
+	int		b;
+	int		l;
+	int		r;
+	int		len;
 	int		tmp;
 }				t_coord;
 
