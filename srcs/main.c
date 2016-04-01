@@ -6,11 +6,23 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/23 09:14:32 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/31 18:35:27 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/04/01 09:44:34 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_filler.h"
+
+static void		ft_free_struct(t_map *map)
+{
+	free(map->board);
+	free(map->pcs);
+}
+
+static void		ft_init_struct(t_map *map)
+{
+	map->board = NULL;
+	map->pcs = NULL;
+}
 
 int				main(void)
 {
@@ -18,6 +30,7 @@ int				main(void)
 	t_map		map;
 
 	line = NULL;
+	ft_init_struct(&map);
 	while (get_next_line(0, &line))
 	{
 		if (ft_strncmp(line, "$$$ exec p1", 11) == 0)
@@ -35,8 +48,7 @@ int				main(void)
 		else
 			ft_error();
 		free(line);
-		free(map.board);
-		free(map.pcs);
+		ft_free_struct(&map);
 	}
 	return (0);
 }

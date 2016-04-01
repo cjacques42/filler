@@ -6,7 +6,7 @@
 /*   By: cjacques <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 15:15:49 by cjacques          #+#    #+#             */
-/*   Updated: 2016/03/31 18:34:36 by cjacques         ###   ########.fr       */
+/*   Updated: 2016/04/01 09:40:20 by cjacques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,18 @@ static int		ft_pcs(t_map *map)
 		if ((int)ft_strlen(line) != map->p_weidth)
 			return (1);
 		map->pcs = ft_strjoin_and_free(map->pcs, line, 1, 1);
-//		map->pcs = ft_strjoin(map->pcs, line);
 		index++;
 	}
-/*	if (ft_contain(map->board, ". XxOo") == 1)
+	if (map->board == NULL || ft_contain(map->board, ". XxOo") == 1)
 	{
 		free(map->board);
 		return (-1);
 	}
-	if (ft_contain(map->pcs, "*.") == 1)
+	if (map->board == NULL || ft_contain(map->pcs, "*.") == 1)
 	{
 		free(map->board);
 		return (-1);
-	}*/
+	}
 	return (ft_algorithm(map));
 }
 
@@ -71,7 +70,6 @@ static int		ft_board(t_map *map)
 			if ((int)ft_strlen(ptr + 1) != map->b_weidth)
 				return (1);
 			map->board = ft_strjoin_and_free(map->board, ptr + 1, 1, 0);
-//			map->board = ft_strjoin(map->board, ptr + 1);
 		}
 		free(line);
 	}
